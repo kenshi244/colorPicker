@@ -1,0 +1,130 @@
+$bgColor: #2f2f3b
+$white: #f1f1f1
+$red: #da2c1b
+$orange: #ed7e09
+$yellow: #fbdf0f
+$green: #01a654
+$turqoise: #05a6d2
+$blue: #020afa
+$purple: #e000fe
+
+html, body
+    height: 100%
+
+body
+    background: $bgColor
+    color: $white
+    font-family: 'Raleway', sans-serif
+
+.wrapper
+    min-height: 100%
+    display: flex
+    flex-direction: column
+
+main
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    justify-content: start
+    align-items: center
+
+    .IroColorPicker
+        .IroSlider
+            display: none !important
+
+    .color-circles__container
+        display: flex
+        align-items: center
+        justify-content: space-around
+        margin-top: 50px
+        width: 92%
+
+        .color-circle
+            width: 33px
+            height: 33px
+            border-radius: 50%
+            background-color: $red
+            margin: 0px
+            &.orange
+                background-color: $orange
+            &.yellow
+                background-color: $yellow
+            &.green
+                background-color: $green
+            &.turqoise
+                background-color: $turqoise
+            &.blue
+                background-color: $blue
+            &.purple
+                background-color: $purple
+
+    .ranges__container
+        margin-top: 30px
+        width: 92%
+        input
+            width: 100%
+
+footer
+    display: flex
+    justify-content: center
+    align-items: center
+    .footer-line
+        width: 55px
+        height: 5px
+        border-radius: 25px
+        background: $white
+        margin-bottom: 5px
+
+.noUi-connect
+    background-color: #EB8224
+
+.noUi-target
+    border: none
+    border-radius: 100px
+    box-shadow: none
+    height: 2px
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%)
+
+.second-slider.noUi-target
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(235,215,188,1) 60%, rgba(255,148,0,1) 100%) !important
+
+.noUi-handle::after,
+.noUi-handle::before
+    display: none
+
+.noUi-handle
+    box-shadow: none
+    border-radius: 100%
+    background-color: #fff
+
+    .noUi-horizontal &
+        width: 13px
+        height: 13px
+        top: -5.5px
+        right: 0
+
+    .noUi-horizontal &-upper
+        right: 0
+
+    .noUi-tooltip
+        display: block
+        position: absolute
+        background: none
+        border: none
+        border-radius: 3px
+        color: #fff
+        padding: 5px
+        text-align: center
+        white-space: nowrap
+        font-family: Raleway
+        font-size: 12px
+        font-weight: 300
+        line-height: 17px
+        letter-spacing: 0.045em
+        text-align: left
+
+.noUi-horizontal .noUi-tooltip
+    -webkit-transform: translate(-50%,0)
+    transform: translate(-50%,0)
+    left: 60%
+    bottom: 40%
